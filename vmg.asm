@@ -242,11 +242,10 @@ start:
     
     error:
         call [SDL_GetError]
-        mov rcx, rax
-        xor rdx, rdx
+        mov rcx, 0
+        mov rdx, 0
         mov r8, rax
         mov r9, 0
-        mov rcx, 0
         call [MessageBoxA]
         call [ExitProcess]
 
